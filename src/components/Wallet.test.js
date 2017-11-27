@@ -31,7 +31,13 @@ describe('Wallet', () => {
     it('updates the local wallet balance in `state` and converts it to a number', () => {
       expect(wallet.state().balance).toEqual(parseInt(userBalance, 10))
     })
-    
+    it('should not update if userBalance for input-wallet is not a number', () => {
+      const stateForBalance = wallet.state().balance
+      wallet.find('.input-wallet')
+        .simulate('change', { target: { value: userBalance }})
+      
+      expect(stateForBalance).toEqual(wallet.state().balance)
+    })
     describe('and the user wants to make a deposit', () => {
       beforeEach(() => wallet.find('.btn-deposit').simulate('click'))
       

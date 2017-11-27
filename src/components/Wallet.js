@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import _isNumber from 'lodash/isNumber'
+import _isNaN from 'lodash/isNaN'
 import { deposit, withdraw } from '../actions/balance'
 
 export class Wallet extends Component {
@@ -10,10 +12,14 @@ export class Wallet extends Component {
   }
   
   updateBalance = (event) => {
-    const value = event.target.value
-    this.setState({
-      balance: parseInt(event.target.value, 10)
-    })
+    const balance = parseInt(event.target.value, 10)
+    const isNumber = _isNumber(balance) && !_isNaN(balance)
+    if (!isNumber) {
+      console.error('Must input Number!')
+      this.setState({ balance: '' })
+      return false
+    }
+    this.setState({ balance })
   }
   deposit = () => this.props.deposit(this.state.balance)
   withdraw = () => this.props.withdraw(this.state.balance)
@@ -24,6 +30,7 @@ export class Wallet extends Component {
         <br />
         <input
           className="input-wallet"
+          value={this.state.balance}
           onChange={this.updateBalance}
         />
         <button className="btn-deposit" onClick={this.deposit}>Deposit</button>

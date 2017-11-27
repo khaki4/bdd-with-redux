@@ -7,19 +7,18 @@ import { deposit, withdraw } from '../actions/balance'
 export class Wallet extends Component {
   constructor() {
     super()
-    
+
     this.state = { balance: undefined }
   }
-  
+
   updateBalance = (event) => {
     const balance = parseInt(event.target.value, 10)
     const isNumber = _isNumber(balance) && !_isNaN(balance)
     if (!isNumber) {
-      console.error('Must input Number!')
       this.setState({ balance: '' })
-      return false
+    } else {
+      this.setState({ balance })
     }
-    this.setState({ balance })
   }
   deposit = () => this.props.deposit(this.state.balance)
   withdraw = () => this.props.withdraw(this.state.balance)

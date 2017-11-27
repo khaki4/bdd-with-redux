@@ -10,6 +10,7 @@ const App = () => {
       <Wallet />
       <hr />
       <Loot />
+      <div>Powerd by <a target="_blank" href="https://www.coindesk.com/price">Coindesk</a></div>
     </div>
   )
 }

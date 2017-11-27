@@ -23,6 +23,17 @@ ShallowWrapper {
 </h2>,
         <hr />,
         <Connect(Wallet) />,
+        <hr />,
+        <Connect(Loot) />,
+        <div>
+          Powerd by 
+          <a
+                    href="https://www.coindesk.com/price"
+                    target="_blank"
+          >
+                    Coindesk
+          </a>
+</div>,
       ],
     },
     "ref": null,
@@ -56,6 +67,58 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "hr",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Powerd by ",
+            <a
+              href="https://www.coindesk.com/price"
+              target="_blank"
+>
+              Coindesk
+</a>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Powerd by ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Coindesk",
+              "href": "https://www.coindesk.com/price",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": "Coindesk",
+            "type": "a",
+          },
+        ],
+        "type": "div",
+      },
     ],
     "type": "div",
   },
@@ -71,6 +134,17 @@ ShallowWrapper {
 </h2>,
           <hr />,
           <Connect(Wallet) />,
+          <hr />,
+          <Connect(Loot) />,
+          <div>
+            Powerd by 
+            <a
+                        href="https://www.coindesk.com/price"
+                        target="_blank"
+            >
+                        Coindesk
+            </a>
+</div>,
         ],
       },
       "ref": null,
@@ -103,6 +177,58 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "hr",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Powerd by ",
+              <a
+                href="https://www.coindesk.com/price"
+                target="_blank"
+>
+                Coindesk
+</a>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Powerd by ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Coindesk",
+                "href": "https://www.coindesk.com/price",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": "Coindesk",
+              "type": "a",
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

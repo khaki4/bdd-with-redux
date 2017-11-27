@@ -10,6 +10,7 @@ export class Wallet extends Component {
   }
   
   updateBalance = (event) => {
+    const value = event.target.value
     this.setState({
       balance: parseInt(event.target.value, 10)
     })
